@@ -12,10 +12,8 @@ import br.com.ifpb.si.pwebii.atividade01qst10.questao.repository.MegaSenaReposit
 @RequestMapping("/megasena")
 public class MegaSenaController {
 	
-	@Autowired
-	MegaSenaRepository megasenaRepository;
-
-	private MegaSena mega_sena;
+	// @Autowired
+	// MegaSenaRepository megasenaRepository;
 
 	@RequestMapping("/form")
 	public String getForm(Model model, MegaSena megasena) {
@@ -25,9 +23,9 @@ public class MegaSenaController {
 
 	@RequestMapping("/save")
 	public String save(Model model, MegaSena megasena){
-		megasenaRepository.save(megasena);
-		this.mega_sena = megasena;
-		this.mega_sena.geraNumerosAleatorios();
+		//megasenaRepository.save(megasena);
+		MegaSena mega_sena = megasena;
+		mega_sena.geraNumerosAleatorios();
 		model.addAttribute("megasena", megasena);
 		return "megasena/list";
 	}

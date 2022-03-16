@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.Random;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@Data
 public class MegaSena {
     // @Id
 	// @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,10 +33,10 @@ public class MegaSena {
         Random random = new Random();
 
         for(int j=0; j < quantidade; j++){
-            int aleatorio = random.nextInt(61);
+            int aleatorio = random.nextInt(1,61);
             for (int i=0; i < quantidade; i++){
                 if (aleatorio == this.numeros_aleatorios.get(i) && i != j){
-                    aleatorio = random.nextInt(61);
+                    aleatorio = random.nextInt(1,61);
                 } else {
                     this.numeros_aleatorios.add(aleatorio);
                 }
