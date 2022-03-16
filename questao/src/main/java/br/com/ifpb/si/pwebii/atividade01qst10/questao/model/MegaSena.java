@@ -25,7 +25,7 @@ public class MegaSena {
                 if (aleatorio == this.numeros_aleatorios.get(i) && i != j){
                     aleatorio = random.nextInt(61);
                 } else {
-                    this.numeros_aleatorios.add(aleatorio)
+                    this.numeros_aleatorios.add(aleatorio);
                 }
             }
         }
