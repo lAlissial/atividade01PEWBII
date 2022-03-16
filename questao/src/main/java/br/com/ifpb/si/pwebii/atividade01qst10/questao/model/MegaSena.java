@@ -2,6 +2,7 @@ package br.com.ifpb.si.pwebii.atividade01qst10.questao.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
@@ -24,9 +25,9 @@ public class MegaSena {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
     private int quantidade;
-    private List<Integer> numeros_aleatorios = new ArrayList<Integer>();
-
+    private ArrayList<Integer> numeros_aleatorios = new ArrayList<Integer>();
     
+
     public void geraNumerosAleatorios(){
         int validos = this.numeros_aleatorios.size();
         Random random = new Random();
@@ -43,5 +44,9 @@ public class MegaSena {
             }
         }
         Collections.sort(this.numeros_aleatorios);
+    }
+
+    public String printaListaSorteados() {
+        return Arrays.toString(this.numeros_aleatorios.toArray());
     }
 }
