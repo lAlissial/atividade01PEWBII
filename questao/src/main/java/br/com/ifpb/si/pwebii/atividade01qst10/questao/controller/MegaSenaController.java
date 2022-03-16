@@ -22,8 +22,7 @@ public class MegaSenaController {
 
 	@RequestMapping("/save")
 	public String save(Model model, MegaSena megasena){
-		MegaSenaRepository.save(megasena);
-		model.addAttribute("megasena", megasena);
+		//MegaSenaRepository.save(megasena);
 		this.mega_sena = megasena;
 		this.mega_sena.geraNumerosAleatorios();
 		model.addAttribute("megasena", megasena);
