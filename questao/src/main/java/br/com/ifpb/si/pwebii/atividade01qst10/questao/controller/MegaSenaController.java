@@ -15,7 +15,7 @@ public class MegaSenaController {
 	private MegaSena mega_sena;
 
 	@RequestMapping("/form")
-	public ModelAndView getForm(Model model MegaSena megasena) {
+	public String getForm(Model model, MegaSena megasena) {
 		model.addAttribute("megasena", megasena);
 		return "megasena/form";
 	}
