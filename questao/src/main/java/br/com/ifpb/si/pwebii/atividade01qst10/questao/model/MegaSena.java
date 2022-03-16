@@ -15,8 +15,8 @@ import lombok.Setter;
 // import javax.persistence.GenerationType;
 // import javax.persistence.Id;
 
-// @Entity
-// @Table(name="tb_megasena")
+// import org.apache.commons.math3.analysis.function.Identity;
+
 @Getter
 @Setter
 @AllArgsConstructor

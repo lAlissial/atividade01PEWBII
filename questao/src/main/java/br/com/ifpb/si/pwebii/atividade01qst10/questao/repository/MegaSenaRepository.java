@@ -5,8 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface MegaSenaRepository extends JpaRepository<MegaSena, Integer> {
-
-	
 }
     
 
