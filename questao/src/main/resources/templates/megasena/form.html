@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt_BR" xmlns:th="www.thymeleaf.org">
+<head>
+<title>BitBank - Cadastro de Conta</title>
+<meta th:insert="~{fragments/headerinc :: head}"></meta>
+</head>
+<body>
+	<div th:insert="~{fragments/navigation :: menu}"></div>
+
+	<main role="main" class="container">
+		<div class="starter-template">
+			<div class="col-md-8 order-md-1">
+				<h1 class="mb-3">Cadastro de conta</h1>
+
+				<form th:action="@{/contas}" method="POST" th:object="${conta}">
+					<input type="hidden" th:field="*{id}" />
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<label for="correntista">Número</label> <input type="text"
+								th:field="*{numero}" />
+							<p th:if="${#fields.hasErrors('numero')}" th:errorclass="error"
+								th:errors="*{numero}" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-9 mb-3">
+							<label for="correntista">Correntista</label> <select
+								name="idCorrentista" class="form-control">
+								<option th:each="correntista : ${correntistaItems}"
+									th:value="${correntista.id}" th:label="${correntista.nome}"
+									th:selected="${correntista.id == idCorrentista}"></option>
+							</select>
+							<p th:if="${#fields.hasErrors('correntista.id')}"
+								th:errorclass="error" th:errors="*{correntista.id}" />
+
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<label for="lastName">Data</label> <input type="text"
+								th:field="*{data}" />
+							<p th:if="${#fields.hasErrors('data')}" th:errorclass="error"
+								th:errors="*{data}" />
+
+						</div>
+					</div>
+
+					<hr class="mb-4">
+
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<button class="btn btn-primary btn-md btn-block" type="submit">Salvar</button>
+							<a class="btn btn-danger btn-md btn-block" th:href="@{/contas}">Cancelar</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<div th:replace="~{fragments/footerinc :: foot}"></div>
+</body>
+</html>
