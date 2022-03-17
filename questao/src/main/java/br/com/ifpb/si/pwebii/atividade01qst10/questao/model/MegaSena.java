@@ -19,7 +19,7 @@ import lombok.Setter;
 
 // @Getter
 // @Setter
-// @AllArgsConstructor
+@AllArgsConstructor
 @Data
 public class MegaSena {
     // @Id
