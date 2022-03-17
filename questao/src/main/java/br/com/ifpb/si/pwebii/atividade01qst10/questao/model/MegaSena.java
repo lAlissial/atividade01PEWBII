@@ -19,7 +19,7 @@ import lombok.Setter;
 
 // @Getter
 // @Setter
-@AllArgsConstructor
+//@AllArgsConstructor
 @Data
 public class MegaSena {
     // @Id
@@ -28,7 +28,6 @@ public class MegaSena {
 
     private int quantidade;
     private ArrayList<Integer> numeros_aleatorios = new ArrayList<Integer>();
-    
 
     public void geraNumerosAleatorios(){
         Random random = new Random();
