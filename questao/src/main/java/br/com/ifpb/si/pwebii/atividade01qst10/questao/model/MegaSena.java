@@ -17,14 +17,15 @@ import lombok.Setter;
 
 // import org.apache.commons.math3.analysis.function.Identity;
 
-@Getter
-@Setter
-@AllArgsConstructor
+// @Getter
+// @Setter
+// @AllArgsConstructor
 @Data
 public class MegaSena {
     // @Id
 	// @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
     private int quantidade;
     private ArrayList<Integer> numeros_aleatorios = new ArrayList<Integer>();
     
