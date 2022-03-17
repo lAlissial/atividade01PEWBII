@@ -46,7 +46,6 @@ public class MegaSena {
     }
 
     public String printaListaSorteados() {
-        this.geraNumerosAleatorios();
         return Arrays.toString(this.numeros_aleatorios.toArray());
     }
 }
