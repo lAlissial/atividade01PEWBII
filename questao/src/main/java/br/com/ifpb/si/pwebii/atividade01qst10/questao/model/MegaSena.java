@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
-import lombok.AllArgsConstructor;
+//import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+//import lombok.Getter;
+//import lombok.Setter;
 
 // import javax.persistence.Entity;
 // import javax.persistence.GeneratedValue;
@@ -46,6 +46,7 @@ public class MegaSena {
     }
 
     public String printaListaSorteados() {
+        this.geraNumerosAleatorios();
         return Arrays.toString(this.numeros_aleatorios.toArray());
     }
 }
